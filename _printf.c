@@ -14,14 +14,14 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (format == NULL)
 	{
-		return(-1);
+		return (-1);
 	}
 	while (*format)
 	{
 		if (*format == '%') /* Identifica un especificador */
 		{
 			format++;
-			d_terminator_specifier(format, args);/* Determina 'c','s','d','i' */
+			d_terminator_specifier(format, args);/*Determina 'c','s','d','i' */
 		}
 		else /* Imprime texto literal */
 		{
@@ -31,4 +31,4 @@ int _printf(const char *format, ...)
 	}
 	va_end(args);
 	return (count + 1); /* Conteo de caracteres (mas 1 por '\0') */
-} 
+}
