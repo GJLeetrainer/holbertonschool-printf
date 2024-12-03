@@ -14,7 +14,7 @@ int do_di(va_list args);
 int do_u(va_list args);
 int do_o(va_list args);
 int do_p(va_list args);
-int do_x(va_list args, int is_uppercase);
-void transform_base(unsigned int num, int base, char *buffer, int is_uppercase);
+int do_x(va_list args, int is_upper);
+void transform_base(unsigned int num, int base, char *buffer, int is_upper);
 
 #endif

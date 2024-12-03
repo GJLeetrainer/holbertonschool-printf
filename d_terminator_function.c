@@ -18,20 +18,20 @@ int d_terminator_specifier(const char *format, va_list args)
 			count += do_c(args);
 			break;
 		case 's':
-			count += do_s(args);
+			count += do_s(args); /*String speci*/
 			break;
 		case 'i':
-		case 'd': /*%d & %i # specifier*/
+		case 'd': /*%d & %i num specifier*/
 			count += do_di(args);
 			break;
 		case '%':
-			count += _putchar('%');
+			count += _putchar('%'); /*Literal % */
 			break;
 		case 'u':
-			count += do_u(args);
+			count += do_u(args); /*unsigned speci*/
 			break;
 		case 'o':
-			count += do_o(args);
+			count += do_o(args); /*Octal speci*/
 			break;
 		case 'x':
 			count += do_x(args, 0); /* Lowercase hexadecimal */
@@ -40,7 +40,7 @@ int d_terminator_specifier(const char *format, va_list args)
 			count += do_x(args, 1); /* Uppercase hexadecimal */
 			break;
 		case 'p':
-			count += do_p(args);
+			count += do_p(args); /*Adresses*/
 			break;
 		default: /* Unknown specifier */
 			count += _putchar('%');
