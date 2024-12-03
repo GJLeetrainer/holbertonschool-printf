@@ -13,7 +13,6 @@ int do_c(va_list args)
 
 	if (c == 0)
 	{
-		c = '0';
 		count += _putchar(c);
 		return (0);
 	}
