@@ -1,0 +1,19 @@
+#include "main.h"
+{
+	int count;
+
+	count = 0;
+	if (specifier == 'c')
+		count += _putchar(va_arg(argp, int));
+	else if (specifier == 's')
+		count += _puts(va_arg(argp, char *));
+	else if (specifier == 'd')
+		count += print_digit((long)va_arg(argp, int), 10);
+	else if (specifier == 'x')
+		count += print_digit((long)va_arg(argp, unsigned int), 16);
+	else
+		count += write(1, &specifier, 1);
+	return (count);
+
+}
+
